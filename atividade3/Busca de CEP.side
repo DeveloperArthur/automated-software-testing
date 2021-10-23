@@ -1,0 +1,121 @@
+{
+  "id": "76957a01-4243-4c46-bf85-7a914a88599f",
+  "version": "2.0",
+  "name": "Busca de CEP",
+  "url": "https://jef.trf3.jus.br/cep/ConsultaCEP.php?action=get_data",
+  "tests": [{
+    "id": "6021fba5-8b53-4e4a-ad76-e4aa48c1a66f",
+    "name": "CEP inexistente",
+    "commands": [{
+      "id": "49f22df6-9299-4f52-9451-3914202eb132",
+      "comment": "",
+      "command": "open",
+      "target": "https://jef.trf3.jus.br/cep/ConsultaCEP.php?action=get_data",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c425b41b-e3e2-4899-a8f2-86117f812677",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1024x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e436b78-a950-4047-b20b-ef30a9bb1c74",
+      "comment": "",
+      "command": "type",
+      "target": "name=cep",
+      "targets": [
+        ["name=cep", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='cep']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "71681-05"
+    }, {
+      "id": "b236e082-427e-4747-aed2-d1083e2d4c24",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(5)",
+      "targets": [
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@value=' Pesquisar ']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8cb71b5e-31a5-4eea-8322-7341f2080b6e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=center:nth-child(1) b",
+      "targets": [
+        ["css=center:nth-child(1) b", "css:finder"],
+        ["xpath=//pre/center/font/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Cep 71681-05 não encontrado')]", "xpath:innerText"]
+      ],
+      "value": "Cep 71681-05 não encontrado"
+    }]
+  }, {
+    "id": "7f70f9d3-038f-496f-a61a-bcafbc982739",
+    "name": "Busca de CEP existente",
+    "commands": [{
+      "id": "907bde2a-a5ad-4189-b084-25b7a27a56f0",
+      "comment": "",
+      "command": "open",
+      "target": "https://jef.trf3.jus.br/cep/ConsultaCEP.php?action=get_data",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "73b16aa0-c89e-4cbf-a53e-9d4532fd325c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1024x708",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87e609e4-f812-4142-97d5-99052c056c0f",
+      "comment": "",
+      "command": "type",
+      "target": "name=cep",
+      "targets": [
+        ["name=cep", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='cep']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "01001000"
+    }, {
+      "id": "df888998-9435-4db2-b18a-58a4109dcb6d",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(5)",
+      "targets": [
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@value=' Pesquisar ']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "51d3ae6d-a3b8-402b-a942-f61fabae5c2d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=b:nth-child(2)",
+      "targets": [
+        ["css=b:nth-child(2)", "css:finder"],
+        ["xpath=//pre/font/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Praça  da Sé')]", "xpath:innerText"]
+      ],
+      "value": "Praça  da Sé"
+    }]
+  }],
+  "suites": [{
+    "id": "207c05e2-b5f7-4222-9333-5f92c4601b2f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6021fba5-8b53-4e4a-ad76-e4aa48c1a66f"]
+  }],
+  "urls": ["https://agilemanifesto.org/", "https://developerarthur.github.io/form-apis-publised/public_html/", "https://jef.trf3.jus.br/cep/ConsultaCEP.php?action=get_data"],
+  "plugins": []
+}
