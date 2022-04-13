@@ -3,7 +3,7 @@ Repositório destinado para estudos do 2º semestre de Teste de Software Automat
 
 Teste de unidade: JUnit
 
-Teste de integração: Rest Assured
+Teste de integração: Mockito, Rest Assured
 
 Teste de sistema: JMeter
 
