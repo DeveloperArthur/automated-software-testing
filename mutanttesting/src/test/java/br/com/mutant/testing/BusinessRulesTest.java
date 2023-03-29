@@ -18,6 +18,28 @@ public class BusinessRulesTest {
     Assertions.assertFalse(result);
   }
 
+  /*
+  * Eu não escrevi esse teste de primeira, mas no report
+  * do Pit mostrou um mutante sobrevivente nesse cenário
+  * de condictional boundary, na classe BusinessRules
+  * linha 6 tem a condição < e o mutante mudou para <=
+  *
+  * quando o mutante introduz um bug no código, e os
+  * testes passam, tem algo errado, e foi o que aconteceu
+  * pois eu não tinha nenhum teste que me certificasse
+  * que 2 numeros iguais resultaria em false, como ele
+  * mudou a condição, e eu não tinha teste garantindo isso,
+  * o mutante sobreviveu
+  *
+  * para resolver eu criei esse teste, agora sim estou validando
+  * que dado 2 números iguais, o resultado tem que ser false
+  *
+  * o mutante muda a condição para <= e com isso meu teste falha
+  * assim, o mutante morre, pois quando o mutante introduz um
+  * bug no código, o teste tem que falhar!
+  *
+  * https://stackoverflow.com/a/57025484/12253990
+  */
   @Test
   void verify_withCondictionalBoundary(){
     boolean result = businessRules.verify(4, 4);
