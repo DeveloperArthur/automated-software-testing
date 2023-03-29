@@ -8,3 +8,5 @@ Teste de integração: Rest Assured, [Testcontainers](https://github.com/Develop
 Teste de sistema: [JMeter](https://github.com/DeveloperArthur/CQRS-with-RabbitMQ-Redis-InfraAsCode/tree/main/src/test/java/br/com/arthur/cqrs/systemtest)
 
 Teste de aceitação/E2E: Selenium
+
+Teste mutante: PIT
