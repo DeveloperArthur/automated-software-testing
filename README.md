@@ -10,3 +10,5 @@ Teste de sistema: [JMeter](https://github.com/DeveloperArthur/CQRS-with-RabbitMQ
 Teste de aceitação/E2E: Selenium
 
 Teste mutante: PIT
+
+Sobre cobertura de código em Try/Catch: [coverage-trycatch.java](https://github.com/DeveloperArthur/algoritmos-guias-anotacoes-uteis/blob/main/coverage-trycatch.java)
