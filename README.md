@@ -11,4 +11,6 @@ Teste de aceitação/E2E: Selenium
 
 Teste mutante: PIT
 
+Teste inteligente: EvoSuite
+
 Sobre cobertura de código em Try/Catch: [coverage-trycatch.java](https://github.com/DeveloperArthur/algoritmos-guias-anotacoes-uteis/blob/main/coverage-trycatch.java)
